@@ -1,5 +1,6 @@
 package com.example.tuckingfypos.to_do_list;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.content.Intent;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -27,17 +29,23 @@ public class MainActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "New List created", Snackbar.LENGTH_LONG)
-                        .setAction("Action", null).show();
+
                 final EditText textToGet =  (EditText) findViewById(R.id.new_list_edit);
                 //findViewById(R.id.new_list_edit).setText(this, "");
                 String textForTitle = textToGet.getText().toString();
                 ToDoList newTDL = new ToDoList(textForTitle);
+                Snackbar.make(view, "New List created", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
                 TextView aTextView = new TextView(getApplicationContext());
                 //TODO: make a new textView in the LinearLayout list_layout that displays the new ToDoList object
-                //TODO: attach an onClickListener to the textView which opens ItemList.java - the second activity
+                //TODO: attach an onClickListener to the textView
+                //TODO: use an intent to open the next Activity, ItemList.java
 
             }
+
+            /*public void toList(View view) {
+                Intent anIntent = new Intent(MainActivity.class)
+            }*/
 
         });
 

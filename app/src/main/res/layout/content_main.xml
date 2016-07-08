@@ -22,13 +22,37 @@
         android:orientation="vertical">
         <TextView
             android:id="@+id/list_header"
+            android:layout_margin="2dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_blue_dark"
-            android:text="To-Do List Title 1"
+            android:text="To-Do List Title"
             android:textStyle="bold"
             android:textSize="25dp"
+            android:onClick="toList"
             />
+        <TextView
+            android:id="@+id/list_header2"
+            android:layout_margin="2dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/holo_blue_dark"
+            android:text="To-Do List Title 2"
+            android:textStyle="bold"
+            android:textSize="25dp"
+            android:onClick="toList"
+            />
+            <TextView
+                android:id="@+id/list_header3"
+                android:layout_margin="2dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_blue_dark"
+                android:text="To-Do List Title 3"
+                android:textStyle="bold"
+                android:textSize="25dp"
+                android:onClick="toList"
+                />
     </LinearLayout>
 
 

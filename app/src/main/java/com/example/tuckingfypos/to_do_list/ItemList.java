@@ -24,6 +24,10 @@ public class ItemList extends AppCompatActivity {
                         .setAction("Action", null).show();
             }
         });
+        //TODO: onClick that takes a String from EditText and makes it a ToDoItem for this ToDoList
+        //TODO: longClick on the ToDoItem that deletes it from the current ToDoList
+        //TODO: longClick on the ToDoList title that deletes the entire ToDoList
+
     }
 
 }
