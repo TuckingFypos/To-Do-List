@@ -9,8 +9,9 @@ public class ToDoItem {
     public ToDoItem(String mItem) {
         this.mItem = mItem;
     }
+
     public ToDoItem(){
-        mItem = "a toDo Item";
+        mItem = "";
     }
 
     public String getmItem() {

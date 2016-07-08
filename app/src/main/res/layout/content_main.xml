@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@android:color/holo_blue_dark"
-            android:text="This is a Content Header"
+            android:text="To-Do List Title 1"
             android:textStyle="bold"
             android:textSize="25dp"
             />

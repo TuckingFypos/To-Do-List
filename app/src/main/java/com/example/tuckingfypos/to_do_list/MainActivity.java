@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -21,17 +22,29 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "New List created", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
-                final EditText getText =  (EditText) findViewById(R.id.new_list_edit);
+                final EditText textToGet =  (EditText) findViewById(R.id.new_list_edit);
+                //findViewById(R.id.new_list_edit).setText(this, "");
+                String textForTitle = textToGet.getText().toString();
+                ToDoList newTDL = new ToDoList(textForTitle);
+                TextView aTextView = new TextView(getApplicationContext());
+                //TODO: make a new textView in the LinearLayout list_layout that displays the new ToDoList object
+                //TODO: attach an onClickListener to the textView which opens ItemList.java - the second activity
+
             }
 
         });
+
+
     }
+
+
 
     /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
